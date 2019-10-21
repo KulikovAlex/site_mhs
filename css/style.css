@@ -1,0 +1,100 @@
+body{
+margin: 0px;
+}
+.header{
+background: rgb(158, 240, 240);
+width:100%;
+height:100px;
+margin: 0 auto;
+float: left;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+font-family: 'Roboto', sans-serif;
+transition: all 0.4s ease;
+}
+
+.initial{
+	top: 0px;
+  position: fixed;
+}
+
+.changed{
+  height: 40px;
+	position: fixed;
+  top: 0;
+}
+
+.menu{
+background:white;
+width:20%;
+height:100%;
+position: absolute;
+left: 0%;
+}
+.box{
+background:white;
+width:100%;
+height:100%;
+float: left;
+}
+.content{
+background:white;
+width:60%;
+height:100%;
+margin-left: 20%;
+margin-top: 110px;
+font-family: 'Gayathri', sans-serif;
+}
+.news{
+background:yellow;
+width:15%;
+height:100%;
+position:absolute;
+right:0%;
+top:0%;
+}
+.footer{
+background:Black;
+width:100%;
+height:10%;
+bottom: 0px;
+position: absolute;
+}
+
+h1 {
+  transition: all 0.4s ease;
+}
+.h1left{
+  margin-right: 80%;
+  margin-top: 0;
+}
+
+nav {
+	  margin-top: -15px;
+    justify-content: center;
+    display: flex;
+    flex: 2 auto;
+    transition: all 0.4s ease;
+}
+.shrink{
+  margin-top: -55px;
+  margin-left: 70%;
+}
+nav ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction: row;
+}
+nav ul li{
+  padding:0.5em;
+}
+.li_selected{
+  background:rgb(143, 223, 223);
+}
+nav ul li a{
+  color:rgb(63, 45, 45);
+  width: 150px;
+  text-decoration:none;
+  display:inline-block;
+}
