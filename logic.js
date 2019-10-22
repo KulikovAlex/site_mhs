@@ -25,19 +25,7 @@ window.onload = () => {
 
 	contentElement = document.getElementsByClassName("content")[0];
 
-	contentElement.innerHTML = this.getMainPage();
-
-	aboutPageRef.onclick = () => {
-		contentElement.innerHTML = this.getAbout();
-	}
-
-	mainPageRef.onclick = () => {
-		contentElement.innerHTML = this.getMainPage();
-	}
-
-	contactsPageRef.onclick = () => {
-		contentElement.innerHTML = this.getContactsPage();
-	}
+	contentElement.innerHTML = this.loadMain();
 
 	mainPageRef.onmouseover = mainPageRef.onmouseout = (event) => {
 		if(event.type == 'mouseover') {
@@ -83,4 +71,14 @@ document.onscroll = () => {
 		document.querySelector('h1').classList.remove('h1left');
 	}
 	
+}
+
+async function loadAbout(){
+	document.getElementsByClassName("content")[0].innerHTML=await (await fetch('http://localhost:8080/html/about.html')).text();
+}
+async function loadContacts(){
+	document.getElementsByClassName("content")[0].innerHTML=await (await fetch('http://localhost:8080/html/contacts.html')).text();
+}
+async function loadMain(){
+	document.getElementsByClassName("content")[0].innerHTML=await (await fetch('http://localhost:8080/html/main.html')).text();
 }
